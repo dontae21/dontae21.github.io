@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 550px;
+  background:red;
+  background-image: url("https://www.vgr.com/wp-content/uploads/2018/10/2017-10-25-3.png");
+}
+ul {
+  padding: 10px;
+  background: black;
+  text-align: center; 
+}
+li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+div {
+  height: 300px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Gloria Hallelujah', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: Black;
+  margin: 60px 0 0 0;
+}
+h2 {
+  font-family: 'Gloria Hallelujah', cursive;
+  text-align: center;
+  color: Blue;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: red;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 40px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("https://d2skuhm0vrry40.cloudfront.net/2018/articles/2018-08-09-10-45/fortnite_item_shop_august_9.JPG/EG11/resize/690x-1/quality/75/format/jpg");
+}
+.second{
+  background-image: url("https://img.letgo.com/images/97/1a/af/3e/971aaf3e46cac24737ddd1d55fc24fd4.jpg?impolicy=img_600");
+}
+.stats{
+  background-image: url("https://i0.wp.com/wallpaperfortnite.info/wp-content/uploads/images/fortnite-les-stats-sont-de-retour-connectesport-com-epic-games-fortnite-stats.jpg?ssl=1");
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+  <ul>
+      <li><button onclick=ItemShop()>Item Shop</button></li>
+      <li><button onclick=Locker()>Locker</button></li>
+      <li><button onclick=Seasons()>Seasons</button></li>
+    </ul>
+<h1>Fortnite</h1>
+<h2>#1 free to play game</h2>
+
+<div id="Fortnite"> </div>
+
+<script>
+ItemShopImages = [
+            'url("https://d2skuhm0vrry40.cloudfront.net/2018/articles/2018-08-09-10-45/fortnite_item_shop_august_9.JPG/EG11/resize/690x-1/quality/75/format/jpg")',
+            'url("https://cdn.gamer-network.net/2019/usgamer/Daily-shop-21-01-19.jpg")',
+            'url("https://videomaven.tech/wp-content/uploads/2019/01/NEW-ITEM-SHOP-SKINS-in-Fortnite-NEW-SKINS-ITEM-SHOP-LIVE-COUNTDOWN-Fortnite-Battle-Royale.jpg")',
+]
+
+LockerImages = [
+  'url("https://i.imgur.com/ZN2Sp4E.jpg")',
+  'url("https://sos-campmobile.pstatic.net/e/301b8i/9_7c7Ud018bng14ecx3gz7a2jh_787eyk.jpg?type=w660")',
+  'url("https://sos-campmobile.pstatic.net/e/2jja7g/7_0i1Ud018bng12cngcupf7l3m_73adzb.jpg?type=w660")',
+  ]
+  
+  SeasonsImages = [
+    'url("https://i.redd.it/cwa2nsvl4s301.png")',
+    'url("https://thumbor.forbes.com/thumbor/711x380/https://blogs-images.forbes.com/davidthier/files/2018/04/Capture-19-1200x642.jpg?width=960")',
+    'url("https://s3.dexerto.com/thumbnails/_thumbnailLarge/fortnite-season-8-leaked-skins-cosmetics.jpg")',
+    ]
+    
+  function ItemShop() {
+    SkullTrooper= document.getElementById("Fortnite")
+    SkullTrooper.innerHTML=''
+    SkullTrooper.innerHTML +=ItemShopDivs[0]
+    SkullTrooper.innerHTML +=ItemShopDivs[1]
+    SkullTrooper.innerHTML +=ItemShopDivs[2]
+     //alert("You have chosen ItemShop")
+     items= document.getElementsByClassName("item")
+     for (i=0; i<3; i=i+1) {
+          items[i].style.background=ItemShopImages[i]
+          items[i].style.backgroundSize = '100% 100%'
+    }
+  }
+       
+  function Locker() {
+    SkullTrooper= document.getElementById("Fortnite")
+    SkullTrooper.innerHTML=''
+    SkullTrooper.innerHTML +=LockerDivs[0]
+    SkullTrooper.innerHTML +=LockerDivs[1]
+    SkullTrooper.innerHTML +=LockerDivs[2]
+       //alert("You have chosen Locker") 
+       items= document.getElementsByClassName("item")
+       for (i=0; i<3; i=i+1) {
+            items[i].style.background=LockerImages[i]
+            items[i].style.backgroundSize = '100% 100%'
+     }
+  }
+  
+  function Seasons() {
+    SkullTrooper= document.getElementById("Fortnite")
+    SkullTrooper.innerHTML=''
+    SkullTrooper.innerHTML +=SeasonsDivs[0]
+    SkullTrooper.innerHTML +=SeasonsDivs[1]
+    SkullTrooper.innerHTML +=SeasonsDivs[2]
+    //alert("You have chosen Seasons")
+    items= document.getElementsByClassName("item")
+       for (i=0; i<3; i=i+1) {
+            items[i].style.background=SeasonsImages[i]
+            items[i].style.backgroundSize = '100% 100%'
+       }
+  }
+  ItemShopDivs= [
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>ItemShop</p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>ItemShop</p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>ItemShop</p></div>',
+    ]
+    LockerDivs= [
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Locker</p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Locker</p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Locker</p></div>',
+    ]
+     SeasonsDivs= [
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Seasons</p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Seasons</p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Seasons</p></div>',
+    ]
+  
+</script>
+
+</body>
