@@ -112,6 +112,7 @@ small {
       <li><button onclick=ItemShop()>Item Shop</button></li>
       <li><button onclick=Locker()>Locker</button></li>
       <li><button onclick=Seasons()>Seasons</button></li>
+      <li><button onclick=Stats()>Stats</button></li>
     </ul>
 <h1>Fortnite</h1>
 <h2>#1 free to play game</h2>
@@ -136,6 +137,11 @@ LockerImages = [
     'url("https://i.redd.it/cwa2nsvl4s301.png")',
     'url("https://thumbor.forbes.com/thumbor/711x380/https://blogs-images.forbes.com/davidthier/files/2018/04/Capture-19-1200x642.jpg?width=960")',
     'url("https://s3.dexerto.com/thumbnails/_thumbnailLarge/fortnite-season-8-leaked-skins-cosmetics.jpg")',
+    ]
+  StatsImages = [
+    'url("https://cdn-images-1.medium.com/max/1600/1*knHjAVovCUE_ZMpT8WjdhQ.jpeg")',
+    'url("https://www.elecspo.com/static/uploads/2018/07/Screenshot48-1024x738.png")',
+    'url("https://cdn.thetrackernetwork.com/cdn/articles/4DCEhd_kills.JPG")',
     ]
     
   function ItemShop() {
@@ -180,6 +186,19 @@ LockerImages = [
             items[i].style.backgroundSize = '100% 100%'
        }
   }
+  function Stats() {
+    skullTrooper= document.getElementById("Fortnite")
+    SkullTrooper.innerHTML=''
+    SkullTrooper.innerHTML +=StatsDivs[0]
+    SkullTrooper.innerHTML +=StatsDivs[1]
+    SkullTrooper.innerHTML +=StatsDivs[2]
+    //alert("You have chosen Stats")
+    items= document.getElementsByClassName("item")
+       for (i=0; i<3; i=i+1) {
+            items[i].style.background=StatsImages[i]
+            items[i].style.backgroundSize = '100% 100%'
+       }
+  }
   ItemShopDivs= [
     '<div class="item" onclick=this.classList.toggle("show-description")><p>ItemShop</p></div>',
     '<div class="item" onclick=this.classList.toggle("show-description")><p>ItemShop</p></div>',
@@ -195,6 +214,11 @@ LockerImages = [
     '<div class="item" onclick=this.classList.toggle("show-description")><p>Seasons</p></div>',
     '<div class="item" onclick=this.classList.toggle("show-description")><p>Seasons</p></div>',
     '<div class="item" onclick=this.classList.toggle("show-description")><p>Seasons</p></div>',
+    ]
+  StatsDivs= [
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Stats</p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Stats</p></div>',
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>Stats</p></div>',
     ]
   
 </script>
