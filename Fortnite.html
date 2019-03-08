@@ -125,6 +125,7 @@ ItemShopImages = [
             'url("https://cdn.gamer-network.net/2019/usgamer/Daily-shop-21-01-19.jpg")',
             'url("https://videomaven.tech/wp-content/uploads/2019/01/NEW-ITEM-SHOP-SKINS-in-Fortnite-NEW-SKINS-ITEM-SHOP-LIVE-COUNTDOWN-Fortnite-Battle-Royale.jpg")',
             'url("https://d2skuhm0vrry40.cloudfront.net/2018/articles/2018-08-15-09-22/fortnite_item_shop_august_15.JPG/EG11/resize/690x-1/quality/75/format/jpg")',
+            'url("https://fortniteintel.com/wp-content/uploads/2018/08/FortniteClient-Win64-Shipping_2018-08-20_01-00-07.jpg")',
 ]
 
 LockerImages = [
@@ -151,9 +152,10 @@ LockerImages = [
     SkullTrooper.innerHTML +=ItemShopDivs[1]
     SkullTrooper.innerHTML +=ItemShopDivs[2]
     SkullTrooper.innerHTML +=ItemShopDivs[3]
+    SkullTrooper.innerHTML +=ItemShopDivs[4]
      //alert("You have chosen ItemShop")
      items= document.getElementsByClassName("item")
-     for (i=0; i<4; i=i+1) {
+     for (i=0; i<5; i=i+1) {
           items[i].style.background=ItemShopImages[i]
           items[i].style.backgroundSize = '100% 100%'
     }
@@ -200,6 +202,7 @@ LockerImages = [
        }
   }
   ItemShopDivs= [
+    '<div class="item" onclick=this.classList.toggle("show-description")><p>ItemShop</p></div>',
     '<div class="item" onclick=this.classList.toggle("show-description")><p>ItemShop</p></div>',
     '<div class="item" onclick=this.classList.toggle("show-description")><p>ItemShop</p></div>',
     '<div class="item" onclick=this.classList.toggle("show-description")><p>ItemShop</p></div>',
