@@ -8,6 +8,11 @@
 /**************************************
 link & button
 **************************************/
+body {
+	font-family: 'Anton', sans-serif;
+}
+	
+}
 .white
 {
 	color:#fff !important;
@@ -184,7 +189,7 @@ a.btn-banner:hover, a.btn-banner:focus
 	background-color: #e43c5c;
 	padding: 40px 0px;
 	font-family: 'Anton', sans-serif;
-	background: black;
+	background: red;
 }
 p.cta-sub-title
 {
@@ -499,10 +504,10 @@ margin-top: 5px;
     transition: all 0.5s ease 0s;
 }
 .footer {
-    background-color: #040E18;
+    background-color: white;
 }
 .footer h3 {
-    color: #fff;
+    color: blue;
     padding-bottom: 30px;
 }
 .footer_social ul {
@@ -518,7 +523,7 @@ margin-top: 5px;
     background: #2e3537 none repeat scroll 0 0;
     border: 1px solid #2e3537;
     box-shadow: 0 0 0 7px transparent;
-    color: #aaa;
+    color: blue;
     display: block;
     font-size: 14px;
     height: 40px;
@@ -529,16 +534,16 @@ margin-top: 5px;
     width: 40px;
 }
 .footer-bottom {
-    background: #09121B;
+    background: white;
     padding: 20px 0;
 }
 .footer_copyright {
-    color: #fff;
+    color: red;
     font-size: 16px;
     margin-bottom: 0;
 }
 .footer_copyright a {
-    color: #e43c5c;
+    color: red;
 }
 #banner
 {
