@@ -65,7 +65,11 @@ function draw(){
 	      y = y + 16
   	  }
      }
-  }
+  else { 
+        x = touches[0].x
+	y = touches[0].y
+}
+
   if (time > 0) {
   background(180,200,220);
   circle(x*s,y,20*s)
