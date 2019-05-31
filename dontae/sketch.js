@@ -50,18 +50,21 @@ function setup() {
   level= 1
 }
 
-function draw() {
-  if (keyIsDown(LEFT_ARROW)) {
-    x = x - 16
-  }
-  if (keyIsDown(RIGHT_ARROW)) {
-    x = x + 16
-  }
-  if (keyIsDown(UP_ARROW)) {
-    y = y - 16
-  }
-  if (keyIsDown(DOWN_ARROW)) {
-    y = y + 16
+function draw(){
+  if (touches.length == 0)   {
+	  if (keyIsDown(LEFT_ARROW)) {
+	      x = x - 16
+	  }
+	  if (keyIsDown(RIGHT_ARROW)) {
+	      x = x + 16
+	  }
+	  if (keyIsDown(UP_ARROW)) {
+	      y = y - 16
+	  }
+	  if (keyIsDown(DOWN_ARROW)) {
+	      y = y + 16
+  	  }
+     }
   }
   if (time > 0) {
   background(180,200,220);
